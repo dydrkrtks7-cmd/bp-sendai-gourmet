@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보 – Sendai gourmet 안내</title>
+    <meta name="description" content="야, 센다이 맛집 정보가 필요해? 현지인 POV로 알려주는 sendai gourmet 상세 가이드. 전화 010-6279-0862로 바로 문의!">
+    <meta name="keywords" content="sendai gourmet, 센다이 맛집, 센다이 정보, sendai 음식, 일본 여행 맛집, 센다이 추천">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <link rel="canonical" href="https://sendai-gourmet.vercel.app/info/">
+    <!-- Open Graph -->
+    <meta property="og:title" content="정보 – Sendai gourmet 안내">
+    <meta property="og:description" content="야, 센다이 맛집 정보가 필요해? 현지인 POV로 알려주는 sendai gourmet 상세 가이드. 전화 010-6279-0862로 바로 문의!">
+    <style>
+        /* reset */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; background: #fafafa; color: #111; }
+
+        /* brutalist base */
+        h1, h2, h3, h4 { font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5em; }
+        h1 { font-size: 2.8rem; line-height: 1.1; }
+        h2 { font-size: 2.2rem; border-left: 6px solid #000; padding-left: 0.5rem; }
+        h3 { font-size: 1.5rem; }
+        a { color: #111; text-decoration: underline; text-underline-offset: 3px; }
+        a:hover { text-decoration: none; background: #ffe066; }
+        img { max-width: 100%; height: auto; display: block; }
+        ul { list-style: none; }
+        p { margin-bottom: 1rem; }
+
+        /* layout */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background: #e8e8e8; border-bottom: 4px solid #000; }
+        .logo a { font-size: 2rem; font-weight: 900; text-decoration: none; letter-spacing: -0.02em; }
+        .logo a:hover { background: transparent; }
+        nav { display: flex; gap: 1.8rem; align-items: center; }
+        nav a { font-size: 1.15rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+        nav a:hover { background: #000; color: #fff; text-decoration: none; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; padding: 6px; }
+        .hamburger span { display: block; width: 28px; height: 3px; background: #000; margin: 4px 0; transition: 0.2s; }
+
+        /* main content */
+        main { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+        .page-intro { background: #fff; padding: 2rem; border: 3px solid #000; margin-bottom: 2rem; box-shadow: 6px 6px 0 #000; }
+        .page-intro p { font-size: 1.2rem; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .card { background: #fff; border: 3px solid #000; padding: 1.5rem; box-shadow: 4px 4px 0 #000; transition: 0.1s; }
+        .card:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 #000; }
+        .card h3 { font-size: 1.4rem; margin-bottom: 0.3rem; border-bottom: 2px solid #000; display: inline-block; }
+        .card p { font-size: 1rem; }
+        .faq-section { background: #fff; border: 3px solid #000; padding: 2rem; margin: 2rem 0; box-shadow: 6px 6px 0 #000; }
+        .faq-item { margin-bottom: 1.5rem; }
+        .faq-item h4 { font-size: 1.2rem; margin-bottom: 0.3rem; font-weight: 700; }
+        .faq-item p { margin-bottom: 0; }
+        .cta-tel { display: inline-block; background: #000; color: #fff; padding: 0.8rem 2rem; font-weight: 800; font-size: 1.3rem; text-decoration: none; margin: 1rem 0; border: 3px solid #000; transition: 0.1s; }
+        .cta-tel:hover { background: #ffe066; color: #000; border-color: #000; }
+
+        /* footer */
+        footer { text-align: center; padding: 2rem; border-top: 4px solid #000; margin-top: 3rem; font-size: 0.9rem; background: #e8e8e8; }
+
+        /* responsive */
+        @media (max-width: 768px) {
+            header { padding: 1rem; }
+            .logo a { font-size: 1.5rem; }
+            nav { display: none; flex-direction: column; background: #fff; position: absolute; top: 70px; left: 0; width: 100%; padding: 1rem; border-bottom: 4px solid #000; z-index: 999; }
+            nav.active { display: flex; }
+            nav a { padding: 0.8rem 0; font-size: 1.2rem; }
+            .hamburger { display: flex; }
+            main { padding: 0 1rem; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            .card-grid { grid-template-columns: 1fr; }
+        }
+
+        /* tel-link pattern */
+        a[href^="tel:"] { font-weight: 700; }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="/">Sendai Gourmet</a></div>
+        <nav id="main-nav">
+            <a href="/">홈</a>
+            <a href="/info/" style="background:#000; color:#fff;">정보</a>
+            <a href="/recommend/">추천</a>
+            <a href="/contact/">연락처</a>
+            <a href="tel:01062790862">전화</a>
+        </nav>
+        <div class="hamburger" onclick="toggleNav()">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>센다이 맛집 정보</h1>
+            <p>야, 사실 센다이 오기 전에 나도 뭐가 진짜 맛집인지 엄청 고민했어. 구글에 검색해도 광고 블로그만 떠서 짜증나고. 그래서 직접 돌아다니고 현지인한테 물어보고 해서 겨우 모은 꿀팁들만 정리했으니까, 믿고 봐도 됨 ㅋㅋ. 여기 있는 정보들은 내가 실제로 먹어보고 인정한 곳들 + 지역 커뮤니티에서 입소문 난 곳들임. 전화 <a href="tel:01062790862">010-6279-0862</a>로 바로 물어봐도 되고, 편하게 읽어봐.</p>
+        </section>
+
+        <section>
+            <h2>📍 지역별 시그널</h2>
+            <p>센다이는 '규탄(牛タン)'만 유명하다고? 아니야! 분명 규탄은 대표주자지만, 사실 이 동네는 자자면(麻婆麺)이나 해산물 요리도 미친 맛임. 특히 아키우(秋保) 쪽 온천 마을 가면 더더욱 로컬 감성 제대로 느낄 수 있어. 국철 센다이 역 근처만 돌아다니지 말고, 고토다이(五橋)나 아오바도리(青葉通り) 쪽으로 5분만 걸어가봐. 완전 다른 세상 열림.</p>
+        </section>
+
+        <section>
+            <h2>🍜 솔직 추천 리스트</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>규탄 와라지야</h3>
+                    <p>내가 진짜 자주 가는 규탄 집. 점심에도 줄 서는데, 그 이유가 있음. 두께가 어마어마하고 육즙이 미친다. 가격 1,800엔 ~ 2,500엔. 꼭 테이블 위에 있는 산초 뿌려 먹어봐.</p>
+                </div>
+                <div class="card
+</body>
+</html>

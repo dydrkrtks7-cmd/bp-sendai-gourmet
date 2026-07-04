@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>센다이 미식 블로그 – 현지인만 아는 sendai gourmet 정보</title>
+  <meta name="description" content="야, 센다이 숨은 맛집 찾고 있어? 내가 직접 먹고 인정한 sendai gourmet 정보 공개한다. 전화 010-6279-0862로 문의 환영!">
+  <meta name="keywords" content="sendai gourmet, 센다이 맛집, 센다이 미식, sendai 음식, 일본 여행 맛집, 센다이 추천, 블로그, 현지인 추천">
+  <meta name="bpaas-design-system" content="brutalist-avantgarde">
+  <meta name="bpaas-design-theme" content="kr-raw-concrete">
+  <link rel="canonical" href="https://sendai-gourmet.vercel.app/blog">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sendai gourmet 블로그 – 센다이 미식 현지인 꿀팁">
+  <meta property="og:description" content="야, 센다이 맛집 어디 갈지 고민된다면? 현지인만 아는 sendai gourmet 정보 다 모아봤어. 전화 010-6279-0862로 바로 문의!">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sendai-gourmet.vercel.app/blog">
+  <meta property="og:site_name" content="Sendai gourmet 안내">
+  <meta property="og:locale" content="ko_KR">
+  
+  <style>
+    /* reset */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #e8e4d9;
+      color: #1a1a1a;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* brutalist base */
+    h1, h2, h3, h4 {
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      font-family: 'Impact', 'Arial Black', sans-serif;
+    }
+    a {
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 3px solid #1a1a1a;
+      transition: all 0.2s;
+    }
+    a:hover {
+      background: #ffdd00;
+      color: #1a1a1a;
+      border-bottom-color: #ffdd00;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    ul {
+      list-style: none;
+    }
+    /* layout */
+    header {
+      background: #1a1a1a;
+      color: #e8e4d9;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 6px solid #ffdd00;
+    }
+    .logo a {
+      font-size: 1.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: none;
+      color: #e8e4d9;
+    }
+    .logo a:hover {
+      background: transparent;
+      color: #ffdd00;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      color: #e8e4d9;
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
+    }
+    nav a:hover {
+      background: transparent;
+      color: #ffdd00;
+      border-bottom: 3px solid #ffdd00;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger span {
+      width: 28px;
+      height: 4px;
+      background: #e8e4d9;
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 0;
+    }
+    .hero {
+      background: #1a1a1a;
+      color: #e8e4d9;
+      padding: 4rem 2rem;
+      text-align: center;
+      border-bottom: 6px solid #ffdd00;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+    .content {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 2rem 4rem;
+      flex: 1;
+    }
+    article {
+      background: #fff;
+      border: 4px solid #1a1a1a;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 8px 8px 0 #1a1a1a;
+    }
+    article h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 4px solid #ffdd00;
+      padding-bottom: 0.3rem;
+    }
+    article h3 {
+      font-size: 1.5rem;
+      margin: 2rem 0 0.8rem;
+    }
+    article p {
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+    article .highlight {
+      background: #ffdd00;
+      padding: 0 0.3rem;
+      font-weight: bold;
+    }
+    article .info-box {
+      background: #1a1a1a;
+      color: #e8e4d9;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border: none;
+    }
+    article .info-box a {
+      color: #ffdd00;
+      border-color: #ffdd00;
+    }
+    article .info-box a:hover {
+      background: #e8e4d9;
+      color: #1a1a1a;
+    }
+    .cta-tel {
+      display: inline-block;
+      background: #ffdd00;
+      color: #1a1a1a;
+      padding: 0.5rem 1.5rem;
+      font-weight: 900;
+      border: 3px solid #1a1a1a;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    .cta-tel:hover {
+      background: #1a1a1a;
+      color: #ffdd00;
+      border-color: #ffdd00;
+    }
+    footer {
+      background: #1a1a1a;
+      color: #e8e4d9;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      border-top: 6px solid #ffdd00;
+      margin-top: auto;
+    }
+    footer a {
+      color: #ffdd00;
+      border: none;
+    }
+    footer a:hover {
+      background: transparent;
+      color: #e8e4d9;
+      border-bottom: 2px solid #e8e4d9;
+    }
+    /* responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-wrap: wrap;
+        padding: 1rem;
+      }
+      nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+      }
+      nav a {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      article {
+        padding: 1.5rem;
+      }
+      article h2 {
+        font-size: 1.6rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .content {
+        padding: 0 1rem 3rem;
+      }
+      .hero {
+        padding: 3rem 1rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      article {
+        padding: 1rem;
+      }
+    }
+    /* hamburger toggle */
+    .nav-open nav {
+      display: flex;
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="/">Sendai gourmet</a></div>
+    <div class="hamburger" onclick="this.parentElement.classList.toggle('nav-open')">
+      <span></span><span></span><span></span>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/blog">Blog</a>
+      <a href="tel:01062790862">문의</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>센다이 숨은 맛집<br>현지인 직찍!</h1>
+    <p>야, 내가 3년째 센다이 살면서 제대로 먹은 sendai gourmet만 모아봤어. 진짜 꿀맛집이다.</p>
+  </section>
+
+  <div class="content">
+    <article>
+      <h2>🔥 규타(소혀) 맛집 3곳 – 관광객은 절대 모름</h2>
+      <p>야, 센다이 오면 누구나 규타 먹잖아? 근데 다들 줄 서는 유명한 체인점만 가더라. 나도 처음엔 그랬는데, 현지인 친구가 데려간 곳에서 제대로 맛을 알게 됐어.</p>
+      
+      <h3>1. 「히바리야」 – 역전 골목 숨은 보석</h3>
+      <p>이곳은 JR 센다이역 동쪽 출구에서 걸어서 5분? 근데 지도 찍어도 잘 안 나와. 간판도 작아서 그냥 지나치기 쉬워. 근데 들어가면 바로 고기 굽는 냄새에 취한다니까. 사장님이 혼자 하시는데, 손님 한 명 한 명 굽는 정도를 맞춰줘. 두께도 다 다르게 구워줘서 질기지 않고 입에서 녹아. 가격도 1500엔 정도로 너무 합리적이야. 야, 진짜 강추한다.</p>
+      
+      <h3>2. 「타누키」 – 아침부터 여는 현지인 성지</h3>
+      <p>이 집은 오전 7시부터 여는 규타 전문점이야. 처음에 아침에 고기 먹는 게 말이 되냐고? 나도 그렇게 생각했어. 근데 현지 아저씨들이 아침부터 소주에 규타 먹는 모습 보고 바로 주문했지. 뭐랄까, 양념이 깊고 숯불 향이 장난 아냐. 게다가 아침 세트는 1000엔도 안 해. 대박 아니야? 점심되면 줄 30분은 기본이니까 아침 가는 걸 추천한다.</p>
+      
+      <h3>3. 「스즈메」 – 나만 알고 싶은 동네 맛집</h3>
+      <p>사실 이 집은 말하기 좀 아까워(웃음). 학교 앞에 있는 작은 가게인데, 학생들 사이에서만 입소문 났었거든. 그런데 작년에 일본 미슐랭 가이드에 촌평 실렸다는 소문이 들려. 허니, 여기 특제 마늘 간장 소스가 진짜 혀가 아니라 인생을 구원하는 맛이야. 10조각 기준 2000엔인데 양도 많고 서비스도 좋아. 평일 저녁에 가면 현지인들 친구처럼 대해줘서 더 좋더라.</p>
+
+      <div class="info-box">
+        <p><strong>📞 궁금하면 바로 전화해!</strong> 예약이나 길 찾기 힘들다 싶으면 연락 언제든 환영이야. <a href="tel:01062790862">010-6279-0862</a>로 직접 알려줄게.</p>
+      </div>
+
+      <h2>🍜 센다이 자자멘 – 나만의 PICK</h2>
+      <p>규타 다음으로 유명한 게 있지. 바로 자자멘(맵고 기름진 중화면)인데, 여기도 체인 말고 현지인 맛집이 따로 있어.</p>
+      <p><span class="highlight">「라이덴」</span> 이 집을 추천한다. 역에서 좀 떨어져 있는데, 걸어서 10분 정도. 일반 자자멘보다 고춧가루를 직접 갈아서 넣어서 향이 엄청나. 그리고 위에 올라가는 간 돼지고기가 눅눅하지 않고 바삭하게 볶았어. 거기에 반숙 계란 올리면 조합이 미쳤다. 나는 2배 맵게 해서 먹는데, 처음이면 보통으로 시켜. 참고로 화요일 정기휴무니까 체크하고 가라!</p>
+
+      <h2>🍣 회(사시미)는 여기가 진리</h2>
+      <p>센다이는 바다가 가까워서 회도 싸고 좋아. 근데 관광지에 있는 식당은 비싸기만 하더라. 내가 자주 가는 곳은 <span class="highlight">「이소야」</span>라는 조그만 이자카야야. 주인장이 매일 아침 시장에서 직접 사 온 생선으로 회를 썰어줘. 1500엔짜리 모리와세(혼합 회) 시키면 광어, 참치, 새우, 오징어, 연어 등 7~8가지가 나와. 야, 이걸 3000엔 받아도 될 퀄리티인데 가격 생각하면 눈물 나. 게다가 사케 종류도 20가지 넘게 있어서 같이 즐기기 좋아. 단골 되니까 서비스로 회 한 접시 더 주더라ㅋㅋ.</p>
+
+      <
+</body>
+</html>
