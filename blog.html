@@ -1,317 +1,315 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>센다이 미식 블로그 – 현지인만 아는 sendai gourmet 정보</title>
-  <meta name="description" content="야, 센다이 숨은 맛집 찾고 있어? 내가 직접 먹고 인정한 sendai gourmet 정보 공개한다. 전화 010-6279-0862로 문의 환영!">
-  <meta name="keywords" content="sendai gourmet, 센다이 맛집, 센다이 미식, sendai 음식, 일본 여행 맛집, 센다이 추천, 블로그, 현지인 추천">
-  <meta name="bpaas-design-system" content="brutalist-avantgarde">
-  <meta name="bpaas-design-theme" content="kr-raw-concrete">
-  <link rel="canonical" href="https://gayang-massage-note.shirts-mapo-class.xyz/blog.html">
-  <!-- Open Graph -->
-  <meta property="og:title" content="센다이 미식 블로그 – 현지인만 아는 sendai gourmet 정보">
-  <meta property="og:description" content="야, 센다이 숨은 맛집 찾고 있어? 내가 직접 먹고 인정한 sendai gourmet 정보 공개한다. 전화 010-6279-0862로 문의 환영!">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://gayang-massage-note.shirts-mapo-class.xyz/blog.html">
-  <meta property="og:site_name" content="Sendai gourmet 안내">
-  <meta property="og:locale" content="ko_KR">
-  
-  <style>
-    /* reset */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      font-size: 16px;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background: #e8e4d9;
-      color: #1a1a1a;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    /* brutalist base */
-    h1, h2, h3, h4 {
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
-      font-family: 'Impact', 'Arial Black', sans-serif;
-    }
-    a {
-      color: #1a1a1a;
-      text-decoration: none;
-      border-bottom: 3px solid #1a1a1a;
-      transition: all 0.2s;
-    }
-    a:hover {
-      background: #ffdd00;
-      color: #1a1a1a;
-      border-bottom-color: #ffdd00;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    ul {
-      list-style: none;
-    }
-    /* layout */
-    header {
-      background: #1a1a1a;
-      color: #e8e4d9;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 6px solid #ffdd00;
-    }
-    .logo a {
-      font-size: 1.8rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      border: none;
-      color: #e8e4d9;
-    }
-    .logo a:hover {
-      background: transparent;
-      color: #ffdd00;
-    }
-    nav a {
-      margin-left: 1.5rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      border: none;
-      color: #e8e4d9;
-      font-size: 0.9rem;
-      padding: 0.3rem 0;
-    }
-    nav a:hover {
-      background: transparent;
-      color: #ffdd00;
-      border-bottom: 3px solid #ffdd00;
-    }
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .hamburger span {
-      width: 28px;
-      height: 4px;
-      background: #e8e4d9;
-      margin: 3px 0;
-      transition: 0.3s;
-      border-radius: 0;
-    }
-    .hero {
-      background: #1a1a1a;
-      color: #e8e4d9;
-      padding: 4rem 2rem;
-      text-align: center;
-      border-bottom: 6px solid #ffdd00;
-    }
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 0.5rem;
-      line-height: 1.1;
-    }
-    .hero p {
-      font-size: 1.4rem;
-      max-width: 700px;
-      margin: 0 auto;
-      font-weight: 300;
-    }
-    .content {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 2rem 4rem;
-      flex: 1;
-    }
-    article {
-      background: #fff;
-      border: 4px solid #1a1a1a;
-      padding: 2.5rem;
-      margin-bottom: 2.5rem;
-      box-shadow: 8px 8px 0 #1a1a1a;
-    }
-    article h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      border-bottom: 4px solid #ffdd00;
-      padding-bottom: 0.3rem;
-    }
-    article h3 {
-      font-size: 1.5rem;
-      margin: 2rem 0 0.8rem;
-    }
-    article p {
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
-    }
-    article .highlight {
-      background: #ffdd00;
-      padding: 0 0.3rem;
-      font-weight: bold;
-    }
-    article .info-box {
-      background: #1a1a1a;
-      color: #e8e4d9;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-      border: none;
-    }
-    article .info-box a {
-      color: #ffdd00;
-      border-color: #ffdd00;
-    }
-    article .info-box a:hover {
-      background: #e8e4d9;
-      color: #1a1a1a;
-    }
-    .cta-tel {
-      display: inline-block;
-      background: #ffdd00;
-      color: #1a1a1a;
-      padding: 0.5rem 1.5rem;
-      font-weight: 900;
-      border: 3px solid #1a1a1a;
-      text-transform: uppercase;
-      font-size: 1.2rem;
-      margin-top: 1rem;
-    }
-    .cta-tel:hover {
-      background: #1a1a1a;
-      color: #ffdd00;
-      border-color: #ffdd00;
-    }
-    footer {
-      background: #1a1a1a;
-      color: #e8e4d9;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      border-top: 6px solid #ffdd00;
-      margin-top: auto;
-    }
-    footer a {
-      color: #ffdd00;
-      border: none;
-    }
-    footer a:hover {
-      background: transparent;
-      color: #e8e4d9;
-      border-bottom: 2px solid #e8e4d9;
-    }
-    /* responsive */
-    @media (max-width: 768px) {
-      header {
-        flex-wrap: wrap;
-        padding: 1rem;
-      }
-      nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem 0;
-      }
-      nav a {
-        margin: 0.5rem 0;
-        font-size: 1rem;
-      }
-      .hamburger {
-        display: flex;
-      }
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .hero p {
-        font-size: 1.1rem;
-      }
-      article {
-        padding: 1.5rem;
-      }
-      article h2 {
-        font-size: 1.6rem;
-      }
-    }
-    @media (max-width: 480px) {
-      .content {
-        padding: 0 1rem 3rem;
-      }
-      .hero {
-        padding: 3rem 1rem;
-      }
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-      article {
-        padding: 1rem;
-      }
-    }
-    /* hamburger toggle */
-    .nav-open nav {
-      display: flex;
-    }
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>센다이 미식 블로그 – 현지인만 아는 sendai gourmet 정보</title>
+ <meta name="description" content="야, 센다이 숨은 맛집 찾고 있어? 내가 직접 먹고 인정한 sendai gourmet 정보 공개한다.">
+ <meta name="keywords" content="sendai gourmet, 센다이 맛집, 센다이 미식, sendai 음식, 일본 여행 맛집, 센다이 추천, 블로그, 현지인 추천">
+ <link rel="canonical" href="https://gayang-massage-note.shirts-mapo-class.xyz/blog.html">
+ <!-- Open Graph -->
+ <meta property="og:title" content="센다이 미식 블로그 – 현지인만 아는 sendai gourmet 정보">
+ <meta property="og:description" content="야, 센다이 숨은 맛집 찾고 있어? 내가 직접 먹고 인정한 sendai gourmet 정보 공개한다.">
+ <meta property="og:type" content="article">
+ <meta property="og:url" content="https://gayang-massage-note.shirts-mapo-class.xyz/blog.html">
+ <meta property="og:site_name" content="Sendai gourmet 안내">
+ <meta property="og:locale" content="ko_KR">
+ 
+ <style>
+ /* reset */
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ font-size: 16px;
+ scroll-behavior: smooth;
+ }
+ body {
+ font-family: 'Helvetica Neue', Arial, sans-serif;
+ background: #e8e4d9;
+ color: #1a1a1a;
+ line-height: 1.6;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ }
+ /* brutalist base */
+ h1, h2, h3, h4 {
+ font-weight: 900;
+ letter-spacing: -0.02em;
+ text-transform: uppercase;
+ font-family: 'Impact', 'Arial Black', sans-serif;
+ }
+ a {
+ color: #1a1a1a;
+ text-decoration: none;
+ border-bottom: 3px solid #1a1a1a;
+ transition: all 0.2s;
+ }
+ a:hover {
+ background: #ffdd00;
+ color: #1a1a1a;
+ border-bottom-color: #ffdd00;
+ }
+ img {
+ max-width: 100%;
+ height: auto;
+ display: block;
+ }
+ ul {
+ list-style: none;
+ }
+ /* layout */
+ header {
+ background: #1a1a1a;
+ color: #e8e4d9;
+ padding: 1rem 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-bottom: 6px solid #ffdd00;
+ }
+ .logo a {
+ font-size: 1.8rem;
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ border: none;
+ color: #e8e4d9;
+ }
+ .logo a:hover {
+ background: transparent;
+ color: #ffdd00;
+ }
+ nav a {
+ margin-left: 1.5rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ border: none;
+ color: #e8e4d9;
+ font-size: 0.9rem;
+ padding: 0.3rem 0;
+ }
+ nav a:hover {
+ background: transparent;
+ color: #ffdd00;
+ border-bottom: 3px solid #ffdd00;
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ }
+ .hamburger span {
+ width: 28px;
+ height: 4px;
+ background: #e8e4d9;
+ margin: 3px 0;
+ transition: 0.3s;
+ border-radius: 0;
+ }
+ .hero {
+ background: #1a1a1a;
+ color: #e8e4d9;
+ padding: 4rem 2rem;
+ text-align: center;
+ border-bottom: 6px solid #ffdd00;
+ }
+ .hero h1 {
+ font-size: 3.5rem;
+ margin-bottom: 0.5rem;
+ line-height: 1.1;
+ }
+ .hero p {
+ font-size: 1.4rem;
+ max-width: 700px;
+ margin: 0 auto;
+ font-weight: 300;
+ }
+ .content {
+ max-width: 960px;
+ margin: 2rem auto;
+ padding: 0 2rem 4rem;
+ flex: 1;
+ }
+ article {
+ background: #fff;
+ border: 4px solid #1a1a1a;
+ padding: 2.5rem;
+ margin-bottom: 2.5rem;
+ box-shadow: 8px 8px 0 #1a1a1a;
+ }
+ article h2 {
+ font-size: 2rem;
+ margin-bottom: 1rem;
+ border-bottom: 4px solid #ffdd00;
+ padding-bottom: 0.3rem;
+ }
+ article h3 {
+ font-size: 1.5rem;
+ margin: 2rem 0 0.8rem;
+ }
+ article p {
+ margin-bottom: 1.2rem;
+ font-size: 1.1rem;
+ }
+ article .highlight {
+ background: #ffdd00;
+ padding: 0 0.3rem;
+ font-weight: bold;
+ }
+ article .info-box {
+ background: #1a1a1a;
+ color: #e8e4d9;
+ padding: 1.5rem;
+ margin: 1.5rem 0;
+ border: none;
+ }
+ article .info-box a {
+ color: #ffdd00;
+ border-color: #ffdd00;
+ }
+ article .info-box a:hover {
+ background: #e8e4d9;
+ color: #1a1a1a;
+ }
+ .cta-tel {
+ display: inline-block;
+ background: #ffdd00;
+ color: #1a1a1a;
+ padding: 0.5rem 1.5rem;
+ font-weight: 900;
+ border: 3px solid #1a1a1a;
+ text-transform: uppercase;
+ font-size: 1.2rem;
+ margin-top: 1rem;
+ }
+ .cta-tel:hover {
+ background: #1a1a1a;
+ color: #ffdd00;
+ border-color: #ffdd00;
+ }
+ footer {
+ background: #1a1a1a;
+ color: #e8e4d9;
+ text-align: center;
+ padding: 2rem;
+ font-size: 0.9rem;
+ border-top: 6px solid #ffdd00;
+ margin-top: auto;
+ }
+ footer a {
+ color: #ffdd00;
+ border: none;
+ }
+ footer a:hover {
+ background: transparent;
+ color: #e8e4d9;
+ border-bottom: 2px solid #e8e4d9;
+ }
+ /* responsive */
+ @media (max-width: 768px) {
+ header {
+ flex-wrap: wrap;
+ padding: 1rem;
+ }
+ nav {
+ display: none;
+ width: 100%;
+ flex-direction: column;
+ align-items: center;
+ padding: 1rem 0;
+ }
+ nav a {
+ margin: 0.5rem 0;
+ font-size: 1rem;
+ }
+ .hamburger {
+ display: flex;
+ }
+ .hero h1 {
+ font-size: 2.2rem;
+ }
+ .hero p {
+ font-size: 1.1rem;
+ }
+ article {
+ padding: 1.5rem;
+ }
+ article h2 {
+ font-size: 1.6rem;
+ }
+ }
+ @media (max-width: 480px) {
+ .content {
+ padding: 0 1rem 3rem;
+ }
+ .hero {
+ padding: 3rem 1rem;
+ }
+ .hero h1 {
+ font-size: 1.8rem;
+ }
+ article {
+ padding: 1rem;
+ }
+ }
+ /* hamburger toggle */
+ .nav-open nav {
+ display: flex;
+ }
+ </style>
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-  <header>
-    <div class="logo"><a href="/">Sendai gourmet</a></div>
-    <div class="hamburger" onclick="this.parentElement.classList.toggle('nav-open')">
-      <span></span><span></span><span></span>
-    </div>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/blog">Blog</a>
-      <a href="tel:01062790862">문의</a>
-    </nav>
-  </header>
+ <header>
+ <div class="logo"><a href="/">Sendai gourmet</a></div>
+ <div class="hamburger" onclick="this.parentElement.classList.toggle('nav-open')">
+ 
+ </div>
+ <nav>
+ <a href="/">Home</a>
+ <a href="/blog">Blog</a>
+ 
+ </nav>
+ </header>
 
 <main>
-  <article class="hero">
-    <h1>센다이 미식 블로그 – 현지인만 아는 sendai gourmet 정보</h1>
-    <p>센다이 음식 문화를 처음 접하는 사람이 알아두면 도움이 되는 정보를 모아 정리했다. 유명세보다는 지역에서 오래 이어진 메뉴 중심으로 다루며, 방문 계획을 세울 때 참고할 수 있는 수준으로 정리했다.</p>
-  </article>
+ <article class="hero">
+ <h1>센다이 미식 블로그 – 현지인만 아는 sendai gourmet 정보</h1>
+ <p>센다이 음식 문화를 처음 접하는 사람이 알아두면 도움이 되는 정보를 모아 정리했다. 유명세보다는 지역에서 오래 이어진 메뉴 중심으로 다루며, 방문 계획을 세울 때 참고할 수 있는 수준으로 정리했다.</p>
+ </article>
 
-  <div class="content">
-    <h2>미야기의 재료가 만드는 맛</h2>
-    <p>센다이가 속한 미야기현은 넓은 평야와 긴 해안선을 함께 가진 지역이라 곡물, 콩류, 해산물이 고루 나는 편이다. 이런 재료 기반이 지역 대표 음식 몇 가지의 뿌리가 됐고, 계절에 따라 상에 오르는 재료도 조금씩 달라진다.</p>
+ <div class="content">
+ <h2>미야기의 재료가 만드는 맛</h2>
+ <p>센다이가 속한 미야기현은 넓은 평야와 긴 해안선을 함께 가진 지역이라 곡물, 콩류, 해산물이 고루 나는 편이다. 이런 재료 기반이 지역 대표 음식 몇 가지의 뿌리가 됐고, 계절에 따라 상에 오르는 재료도 조금씩 달라진다.</p>
 
-    <h2>대표 메뉴 다섯 가지</h2>
-    <ul>
-      <li>규탄야키 — 소 혀를 얇게 저며 숯불에 굽는 요리로, 센다이를 대표하는 음식으로 가장 먼저 꼽힌다.</li>
-      <li>즌다모찌 — 풋콩을 곱게 갈아 만든 소를 떡에 얹은 디저트류로 계절 한정으로 파는 곳이 많다.</li>
-      <li>사사카마보코 — 조릿대 잎 모양으로 빚은 어묵으로, 선물용으로도 널리 팔린다.</li>
-      <li>히야시추카 — 차가운 면 요리로, 센다이 지역이 발상지 중 하나로 거론된다.</li>
-      <li>아부라후 돈부리 — 튀긴 밀 글루텐을 달게 조려 덮밥으로 올리는 향토 음식이다.</li>
-    </ul>
+ <h2>대표 메뉴 다섯 가지</h2>
+ <ul>
+ <li>규탄야키 — 소 혀를 얇게 저며 숯불에 굽는 요리로, 센다이를 대표하는 음식으로 가장 먼저 꼽힌다.</li>
+ <li>즌다모찌 — 풋콩을 곱게 갈아 만든 소를 떡에 얹은 디저트류로 계절 한정으로 파는 곳이 많다.</li>
+ <li>사사카마보코 — 조릿대 잎 모양으로 빚은 어묵으로, 선물용으로도 널리 팔린다.</li>
+ <li>히야시추카 — 차가운 면 요리로, 센다이 지역이 발상지 중 하나로 거론된다.</li>
+ <li>아부라후 돈부리 — 튀긴 밀 글루텐을 달게 조려 덮밥으로 올리는 향토 음식이다.</li>
+ </ul>
 
-    <div class="highlight">
-      <div class="info-box">
-        <p>참고: 계절 한정 메뉴는 시기가 지나면 취급하지 않는 매장이 많으므로, 특정 메뉴를 목적으로 방문할 때는 판매 시기를 먼저 확인하는 편이 좋다.</p>
-      </div>
-    </div>
+ <div class="highlight">
+ <div class="info-box">
+ <p>참고: 계절 한정 메뉴는 시기가 지나면 취급하지 않는 매장이 많으므로, 특정 메뉴를 목적으로 방문할 때는 판매 시기를 먼저 확인하는 편이 좋다.</p>
+ </div>
+ </div>
 
-    <h2>메뉴를 고를 때 참고할 점</h2>
-    <p>규탄야키는 두께와 굽는 정도에 따라 식감 차이가 크므로, 처음 방문한다면 기본 구성을 먼저 시도해보고 다음에 취향에 맞춰 조정하는 방식이 흔히 권장된다. 즌다모찌처럼 재료 손질에 시간이 걸리는 메뉴는 매장마다 준비 수량이 정해져 있어 이른 시간에 소진되는 경우도 있다.</p>
+ <h2>메뉴를 고를 때 참고할 점</h2>
+ <p>규탄야키는 두께와 굽는 정도에 따라 식감 차이가 크므로, 처음 방문한다면 기본 구성을 먼저 시도해보고 다음에 취향에 맞춰 조정하는 방식이 흔히 권장된다. 즌다모찌처럼 재료 손질에 시간이 걸리는 메뉴는 매장마다 준비 수량이 정해져 있어 이른 시간에 소진되는 경우도 있다.</p>
 
-    <h2>여행 동선을 짤 때 참고할 점</h2>
-    <p>센다이역을 중심으로 이치반초 상점가, 아케이드 거리에 매장이 밀집해 있어 도보 이동만으로도 여러 곳을 둘러볼 수 있다. 신칸센으로 도쿄에서 약 한 시간 반 거리라 당일치기 미식 여행지로도 자주 언급된다.</p>
-    <p>8월 초에는 칠석마츠리가 열려 상점가에 장식이 걸리고 유동인구가 크게 늘어난다. 이 시기에 방문한다면 주요 매장의 대기시간이 평소보다 길어질 수 있다는 점을 감안하는 것이 좋다. 축제 기간을 피해 방문하면 상대적으로 여유 있게 둘러볼 수 있다.</p>
-  </div>
+ <h2>여행 동선을 짤 때 참고할 점</h2>
+ <p>센다이역을 중심으로 이치반초 상점가, 아케이드 거리에 매장이 밀집해 있어 도보 이동만으로도 여러 곳을 둘러볼 수 있다. 신칸센으로 도쿄에서 약 한 시간 반 거리라 당일치기 미식 여행지로도 자주 언급된다.</p>
+ <p>8월 초에는 칠석마츠리가 열려 상점가에 장식이 걸리고 유동인구가 크게 늘어난다. 이 시기에 방문한다면 주요 매장의 대기시간이 평소보다 길어질 수 있다는 점을 감안하는 것이 좋다. 축제 기간을 피해 방문하면 상대적으로 여유 있게 둘러볼 수 있다.</p>
+ </div>
 
-  <p>문의: <a class="cta-tel" href="tel:01062790862">01062790862</a></p>
+ <p>문의: </p>
 </main>
 
 
