@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · sendai-gourmet</title>
+  <meta name="description" content="sendai-gourmet에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://gayang-massage-note.shirts-mapo-class.xyz/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* reset */
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { font-size: 16px; scroll-behavior: smooth; }
+ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; background: #fafafa; color: #111; }
+
+ /* brutalist base */
+ h1, h2, h3, h4 { font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5em; }
+ h1 { font-size: 2.8rem; line-height: 1.1; }
+ h2 { font-size: 2.2rem; border-left: 6px solid #000; padding-left: 0.5rem; }
+ h3 { font-size: 1.5rem; }
+ a { color: #111; text-decoration: underline; text-underline-offset: 3px; }
+ a:hover { text-decoration: none; background: #ffe066; }
+ img { max-width: 100%; height: auto; display: block; }
+ ul { list-style: none; }
+ p { margin-bottom: 1rem; }
+
+ /* layout */
+ header { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background: #e8e8e8; border-bottom: 4px solid #000; }
+ .logo a { font-size: 2rem; font-weight: 900; text-decoration: none; letter-spacing: -0.02em; }
+ .logo a:hover { background: transparent; }
+ nav { display: flex; gap: 1.8rem; align-items: center; }
+ nav a { font-size: 1.15rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+ nav a:hover { background: #000; color: #fff; text-decoration: none; }
+ .hamburger { display: none; flex-direction: column; cursor: pointer; padding: 6px; }
+ .hamburger span { display: block; width: 28px; height: 3px; background: #000; margin: 4px 0; transition: 0.2s; }
+
+ /* main content */
+ main { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+ .page-intro { background: #fff; padding: 2rem; border: 3px solid #000; margin-bottom: 2rem; box-shadow: 6px 6px 0 #000; }
+ .page-intro p { font-size: 1.2rem; }
+ .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+ .card { background: #fff; border: 3px solid #000; padding: 1.5rem; box-shadow: 4px 4px 0 #000; transition: 0.1s; }
+ .card:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 #000; }
+ .card h3 { font-size: 1.4rem; margin-bottom: 0.3rem; border-bottom: 2px solid #000; display: inline-block; }
+ .card p { font-size: 1rem; }
+ .faq-section { background: #fff; border: 3px solid #000; padding: 2rem; margin: 2rem 0; box-shadow: 6px 6px 0 #000; }
+ .faq-item { margin-bottom: 1.5rem; }
+ .faq-item h4 { font-size: 1.2rem; margin-bottom: 0.3rem; font-weight: 700; }
+ .faq-item p { margin-bottom: 0; }
+ .cta-tel { display: inline-block; background: #000; color: #fff; padding: 0.8rem 2rem; font-weight: 800; font-size: 1.3rem; text-decoration: none; margin: 1rem 0; border: 3px solid #000; transition: 0.1s; }
+ .cta-tel:hover { background: #ffe066; color: #000; border-color: #000; }
+
+ /* footer */
+ footer { text-align: center; padding: 2rem; border-top: 4px solid #000; margin-top: 3rem; font-size: 0.9rem; background: #e8e8e8; }
+
+ /* responsive */
+ @media (max-width: 768px) {
+ header { padding: 1rem; }
+ .logo a { font-size: 1.5rem; }
+ nav { display: none; flex-direction: column; background: #fff; position: absolute; top: 70px; left: 0; width: 100%; padding: 1rem; border-bottom: 4px solid #000; z-index: 999; }
+ nav.active { display: flex; }
+ nav a { padding: 0.8rem 0; font-size: 1.2rem; }
+ .hamburger { display: flex; }
+ main { padding: 0 1rem; }
+ h1 { font-size: 2rem; }
+ h2 { font-size: 1.6rem; }
+ .card-grid { grid-template-columns: 1fr; }
+ }
+
+ /* tel-link pattern */
+ a[href^="tel:"] { font-weight: 700; }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · sendai-gourmet">
+  <meta property="og:description" content="sendai-gourmet에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://gayang-massage-note.shirts-mapo-class.xyz/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="logo"><a href="/">Sendai Gourmet</a></div>
+ <nav id="main-nav">
+ <a href="/">홈</a>
+ <a href="/info/" style="background:#000; color:#fff;">정보</a>
+ <a href="/recommend/">추천</a>
+ <a href="/contact/">연락처</a>
+ 
+ </nav>
+ <div class="hamburger" onclick="toggleNav()">
+ 
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0087.html">Sendai gourmet 안내</a>
+        <p class="post-item__summary">빠질 때 빨리 손을 쓰라는 말은 절반만 맞다. 언제 손을 쓰지 말아야 하는지를 함께 말해주지 않기 때문이다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0088.html">Sendai gourmet 안내</a>
+        <p class="post-item__summary">목록 맨 위에 있던 가게가 문을 닫은 지 한참 지나 있었다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0364.html">Sendai gourmet 안내와 마곡 유흥 추천정보 비교를 통한 올바른 선택 기준</a>
+        <p class="post-item__summary">여러분은 평소 장소를 선택할 때 어떤 기준을 가장 중요하게 생각하시나요. Sendai gourmet 안내를 참고하며 식도락을 즐기는 것과 마곡 유흥 추천정보를 활용해 밤 문화를 탐색하는 것은 사실 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0365.html">Sendai gourmet 안내를 참고한 합정 노래방 추천정보 및 선별 가이드</a>
+        <p class="post-item__summary">해외 여행 시 Sendai gourmet 안내 정보를 찾는 것과 마찬가지로 국내 유흥 공간을 선택할 때도 체계적인 접근이 필요합니다. 합정 지역은 접근성이 좋지만, 정보의 신뢰도를 파악하지 못하면 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0366.html">Sendai gourmet 안내 기반 연남 클럽 추천정보 선택을 위한 가격 기준</a>
+        <p class="post-item__summary">낯선 도시의 Sendai gourmet 안내를 살피듯, 연남동의 밤 문화를 즐기기 위해서도 자신만의 엄격한 기준이 필요합니다. 수많은 업소가 경쟁하는 지역에서 가격 대비 만족도를 결정짓는 핵심 요소</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0367.html">Sendai gourmet 안내와 비교하는 합정 셔츠룸 추천정보 실패 지점</a>
+        <p class="post-item__summary">Sendai gourmet 안내를 꼼꼼히 읽고 여행을 준비하듯, 국내의 특정 업종을 이용할 때도 철저한 사전 준비가 필요합니다. 많은 방문객이 합정 일대에서 셔츠룸을 찾다가 실패하는 가장 큰 이유는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0368.html">Sendai gourmet 안내를 응용한 공덕 가라오케 추천정보 확인 항목</a>
+        <p class="post-item__summary">낯선 지역의 식당을 찾을 때 Sendai gourmet 안내를 참고하듯, 공덕 인근 가라오케를 방문할 때도 기준점이 되는 체크리스트가 필요합니다. 무작정 방문하는 것은 운에 모든 것을 맡기는 것과 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0369.html">Sendai gourmet 안내를 찾는 이들을 위한 상수 마사지 추천정보</a>
+        <p class="post-item__summary">주말 오후 갑작스럽게 찾아온 근육통 때문에 일정을 수정해야 하는 난감한 상황을 겪어본 적이 있을 것입니다. 평소처럼 활기찬 외출을 계획했더라도 몸 상태가 따라주지 않으면 온전한 즐거움을 누리기 어렵</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0370.html">Sendai gourmet 안내와 망원 노래방 추천정보의 효율적인 선택</a>
+        <p class="post-item__summary">많은 이들이 노래방은 오직 밤늦은 시간에만 방문하는 곳이라고 오해하곤 합니다. 하지만 최근에는 밝은 시간대에도 건전하고 쾌적하게 즐길 수 있는 공간이 망원 곳곳에 마련되어 있습니다. 시간에 대한 선</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0371.html">Sendai gourmet 안내를 참고한 홍대 노래방 추천정보 핵심 분석</a>
+        <p class="post-item__summary">성공적인 모임을 위해서는 장소를 선택할 때 몇 가지 필수적인 조건을 만족해야 합니다. 우선 인원 수용 범위와 그에 적합한 룸 크기가 무엇보다 중요하며, 이동 접근성 또한 고려 대상입니다. 인원 구성</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0372.html">Sendai gourmet 안내와 공덕 셔츠룸 추천정보 비교 가이드</a>
+        <p class="post-item__summary">혹시 당신은 한 번의 선택을 위해 얼마나 많은 시간을 비교에 투자하십니까? 무조건 저렴한 곳을 찾는 것이 정답일지, 아니면 품질을 우선하는 것이 옳을지에 대해 깊이 고민해본 적이 있을 것입니다. 공</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0373.html">Sendai gourmet 안내를 통한 연남 유흥 추천정보 확인법</a>
+        <p class="post-item__summary">타 지역의 맛집을 찾는 Sendai gourmet 안내 방식은 정보의 옥석을 가려내는 안목을 기르는 데 유용합니다. 연남 지역에서 즐길 수 있는 유흥 문화 역시 무분별한 광고보다는 체계적인 분석을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0374.html">Sendai gourmet 안내와 마곡 가라오케 추천정보 분석</a>
+        <p class="post-item__summary">여행지에서 맛집을 찾아내는 Sendai gourmet 안내 철학은 국내의 여러 엔터테인먼트 시설을 선택할 때도 충분히 적용 가능합니다. 특히 마곡 지역의 다양한 시설을 고려할 때 어떤 기준을 세우느</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
